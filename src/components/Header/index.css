@@ -1,0 +1,79 @@
+/* Header.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&family=Roboto:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 100px;
+  transition: 0.5s ease;
+}
+
+.brand {
+  height: 50px;
+  width: 70px;
+}
+
+.navigation {
+  position: relative;
+}
+
+.navigation-items {
+  list-style-type: none;
+  background-color: transparent;
+}
+
+.navigation-items li {
+  display: inline-block;
+  position: relative;
+  margin-left: 30px;
+}
+
+.navigation-items a {
+  display: block;
+  color: #627180;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.dropdown li {
+  display: block;
+  font-size: 16px;
+  margin-left: 0;
+  width: 300px;
+  padding-bottom: 20px;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: white;
+  z-index: 999;
+  display: none;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-items li:hover .dropdown {
+  display: block;
+}
+
+.navigation-items a:hover {
+  color: #082847;
+  text-decoration: none;
+  font-weight: 600;
+}

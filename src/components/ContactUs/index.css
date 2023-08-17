@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&family=Roboto:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.contactUs-down-1{
+    background-color: #ffffff;
+    height: 50vh;
+    background-size: cover;
+    width: 100%;
+    padding: 40px;
+    margin-top: 20vh;
+}
+.contactUs-down-1-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.contactUs-down-2{
+    background-color: #ffffff;
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contactUs-down-2-contact-form-column{
+    display: flex;
+    flex-direction: column;
+}
+.contactUs-down-2-contact-form-row{
+    display: flex;
+    flex-direction: row;
+}
+.text {
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 200;
+    border-radius: 30px;
+    color: black;
+    background-color: #a1a1a1;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    border-style: none;
+    position: relative;
+    z-index: 2;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    transition: all 0.3s ease
+}
+button:hover{
+    background-color: blue;
+    color: white;
+}
+.services-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 100;
+    height: 65px;
+    text-align: start;
+    width: 254px;
+    padding: 20px;
+}

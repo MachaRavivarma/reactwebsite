@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&family=Roboto:wght@700&display=swap');
+
+/* Reset default styles and set font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styles for portfolio-down-1 section */
+.portfolio-down-1 {
+    background-color: #ffffff;
+    background-size: cover;
+    min-height: 50vh;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 20vh;
+}
+
+/* Styles for carousel section */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-content img {
+    width: auto;
+    height: 400px; /* Set a constant height for the images */
+    object-fit: cover;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Styles for portfolio-down-2 section */
+.portfolio-down-2 {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+}
+
+.portfolio-down-2 h1 {
+    color: #141414;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.portfolio-down-2 p {
+    color: #363434;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Styles for portfolio-down-2-slide section */
+.portfolio-down-2-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+.carousel-container img {
+    width: calc(100% / 3);
+    height: auto;
+    object-fit: cover;
+    margin-left: 14px
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-container button a {
+    text-decoration: none;
+    color: white;
+}

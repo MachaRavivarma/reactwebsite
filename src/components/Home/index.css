@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&family=Roboto:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.slider {
+  display: none;
+}
+
+.slider img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-text {
+  position: absolute;
+  background-color: transparent;
+  padding: 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.animated-text {
+  overflow: hidden;
+  white-space: pre-line; /* Preserve line breaks */
+}
+
+.animated-paragraph {
+  display: block;
+  opacity: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #303030;
+  animation: slide-in-text 1.5s ease-in-out 1.5s forwards;
+}
+
+.animated-heading {
+  display: block;
+  opacity: 0;
+  animation: slide-in-text 1.5s ease-in-out 1.5s forwards;
+}
+
+@keyframes slide-in-text {
+  0% {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animated-image {
+  opacity: 0;
+  animation: slide-in 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.9);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+}
+
+.text-1 {
+  left: 45%;
+  transform: translate(-45%);
+  top: 35%;
+  transform: translate(-35%);
+}
+
+.text-2 {
+  left: 35%;
+  transform: translate(-35%);
+  top: 35%;
+  transform: translate(-35%);
+}
+
+.text-3 {
+  left: 60%;
+  transform: translate(-60%);
+  top: 30%;
+  transform: translate(-30%);
+}
+
+.heading1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+}
+
+.heading2 {
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+  text-decoration: overline;
+  text-decoration-color: orange;
+}
+
+.heading3 {
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
+}
+
+.heading4 {
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
+}
+
+/* ... existing styles ... */
+.arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%; /* To make sure the buttons are centered horizontally */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.arrow-left,
+.arrow-right {
+  /* Additional styles to create a circular background */
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.arrow-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.arrow-background-left {
+  /* Set the initial background image for left arrow */
+  background-image: url('https://i.ibb.co/ggBN8NP/Untitled-1-01.jpg');
+}
+
+.arrow-background-right {
+  /* Set the initial background image for right arrow */
+  background-image: url('https://i.ibb.co/PGg3WhG/Untitled-1-02.jpg');
+}
+
+/* Styling for the arrow buttons */
+.arrow-left {
+  content: ""; /* Remove Unicode arrow character */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /* Adjust the icon size */
+}
+
+.arrow-right {
+  content: ""; /* Remove Unicode arrow character */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /* Adjust the icon size */
+}
+
+/* Styling for the arrow buttons */
+.arrow-left::before,
+.arrow-right::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+}
+
+.arrow-left:hover::before,
+.arrow-right:hover::before {
+  opacity: 1;
+}
+
+.arrow-left::after,
+.arrow-right::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+
+.arrow-left:hover::after,
+.arrow-right:hover::after {
+  opacity: 1;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: transparent;
+  color: white;
+}
+
+/* Optional: Adding some styles for the arrows to make them more visually appealing */
+.arrow-left {
+  /* Use Unicode Left Arrow character as content */
+  content: "\2190";
+}
+
+.arrow-right {
+  /* Use Unicode Right Arrow character as content */
+  content: "\2192";
+}
+
+  
+.main-down-1{
+  background-color: #50ad48;
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-down-1-heading{
+  font-size: 21px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 35px;
+  text-align: center;
+}
+
+/* YourComponent.css */
+
+.main-down-2 {
+  background-color: #a8f7a8;
+  background-size: cover;
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.main-down-2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-down-2-content-p1 {
+  color: #0c0d0d;
+  font-size: 15px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.main-down-2-content-h1 {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  font-size: 50px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: -25px;
+}
+
+.main-down-2-content-p2 {
+  color: #0c0d0d;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.main-down-2-content-h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #595959;
+  padding-left: 100px;
+  cursor: pointer;
+  outline: none;
+}
+
+.main-down-2-content-h2:hover {
+  color: #0c0d0d;
+}
+
+.main-down-2-content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.xcd {
+  display: none;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 100px;
+  color: #141414;
+  padding-top: 10px;
+}
+
+button {
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:focus {
+  outline: none;
+}
+
+.fa-icon {
+  font-size: 18px;
+  color: #000;
+}
+
+.xcd.visible + button .fa-icon:first-child {
+  display: none;
+}
+
+.xcd.visible + button .fa-icon:last-child {
+  display: inline-block;
+}
+
+/* Additional styles go here */
+
+
+.main-down-3 {
+  background-color: #3f403f;
+  background-size: cover;
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-down-3-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  align-items: start;
+}
+
+.main-down-3-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.main-down-3-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.i1 {
+  background-color: blue;
+}
+
+.i2 {
+  background: linear-gradient(to top, #EC5443, #FF7B6C);
+}
+
+.i3 {
+  background: linear-gradient(to top, #FAD961, #F76B1C 100%);
+}
+
+.i4 {
+  background: linear-gradient(to top, #3CFFD6, #0C904D 100%);
+}
+
+.i5 {
+  background: linear-gradient(to top, #2853C3, #00DCFF 100%);
+}
+.i1,.i2,.i3,.i4,.i5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  padding: 20px;
+}
+
+.li-content {
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.main-down-3-text2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* CSS for .main-down-4 container */
+.main-down-4 {
+  background-color: #627180;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* CSS for heading inside .main-down-4 */
+.main-down-4 h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #F76B1C;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+/* CSS for logos container inside .main-down-4 */
+.main-down-4 .logos {
+  overflow: hidden;
+  padding: 30px;
+  background-color: transparent;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* CSS for sliding logo container */
+.main-down-4 .logos .logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+/* CSS for logos images inside the slide container */
+.main-down-4 .logos .logos-slide img {
+  height: 100px;
+  margin: 0 40px;
+}
+
+/* Keyframes animation for sliding effect */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause the sliding animation on hover */
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+/* Pseudo elements for creating gradient mask on both ends */
+.logos::before,
+.logos::after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos::before {
+  left: 0;
+  background-color: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos::after {
+  right: 0;
+  background-color: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
